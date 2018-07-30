@@ -1,0 +1,31 @@
+---
+
+rabbitmq_daemon: rabbitmq-server
+rabbitmq_state: started
+rabbitmq_enabled: yes
+
+# Security
+rabbitmq_create_admin: true
+rabbitmq_admin_username: admin
+rabbitmq_admin_password: admin
+rabbitmq_remove_guest: true
+
+erlang_version: "20.1.7"
+
+erlang_deb: "esl-erlang_{{ erlang_version }}-1~ubuntu~trusty_amd64.deb"
+erlang_deb_url: "https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_{{ erlang_version }}-1~ubuntu~trusty_amd64.deb"
+
+erlang_rpm: "esl-erlang_{{ erlang_version }}-1~centos~7_amd64.rpm"
+erlang_rpm_url: "http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_{{ erlang_version }}-1~centos~7_amd64.rpm"
+
+epel_repo_url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm"
+epel_repo_gpg_key_url: "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}"
+epel_repofile_path: "/etc/yum.repos.d/epel.repo"
+
+rabbitmq_version: "3.6.11"
+
+rabbitmq_rpm: "rabbitmq-server-{{ rabbitmq_version }}-1.el{{ ansible_distribution_major_version }}.noarch.rpm"
+rabbitmq_rpm_url: "https://packagecloud.io/rabbitmq/rabbitmq-server/packages/el/{{ ansible_distribution_major_version }}/{{ rabbitmq_rpm }}/download"
+
+rabbitmq_deb: "rabbitmq-server_{{ rabbitmq_version }}-1_all.deb"
+rabbitmq_deb_url: "https://packagecloud.io/rabbitmq/rabbitmq-server/packages/{{ ansible_distribution | lower }}/{{ ansible_distribution_release }}/{{ rabbitmq_deb }}/download"

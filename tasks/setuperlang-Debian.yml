@@ -1,0 +1,10 @@
+---
+- name: Download erlang package.
+  get_url:
+    url: "{{ erlang_deb_url }}"
+    dest: "/tmp/{{ erlang_deb }}"
+
+- name: Ensure erlang is installed.
+  apt:
+    deb: "/tmp/{{ erlang_deb }}"
+    state: present

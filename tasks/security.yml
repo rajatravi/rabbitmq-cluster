@@ -1,0 +1,19 @@
+---
+- name: security | (re)creating the administrator account
+  rabbitmq_user: 
+    user: "{{ rabbitmq_admin_username }}"
+    password: "{{ rabbitmq_admin_password }}"
+    vhost: /
+    tags: administrator
+    configure_priv: .*
+    read_priv: .*
+    write_priv: .*
+    state: present
+    force: yes
+  when: rabbitmq_create_admin
+
+- name: security | removing the guest account
+  rabbitmq_user:
+    user: guest
+    state: absent
+  when: rabbitmq_remove_guest

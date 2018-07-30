@@ -1,0 +1,10 @@
+---
+- name: Download erlang package.
+  get_url:
+    url: "{{ erlang_rpm_url }}"
+    dest: "/tmp/{{ erlang_rpm }}"
+
+- name: Ensure erlang is installed.
+  yum:
+    name: "/tmp/{{ erlang_rpm }}"
+    state: "present"
