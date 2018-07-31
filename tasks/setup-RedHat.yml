@@ -1,5 +1,8 @@
 ---
 - include: installepel.yml
+
+- include: setuperlang-RedHat.yml
+
 - name: Add packagecloud GPG key.
   rpm_key:
     key: "https://packagecloud.io/gpg.key"

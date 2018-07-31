@@ -1,7 +1,5 @@
 # Ansible Role: RabbitMQ
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-rabbitmq.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-rabbitmq)
-
 Installs RabbitMQ on Linux.
 
 ## Requirements
@@ -30,8 +28,8 @@ None.
 
 ## License
 
-MIT / BSD
+
 
 ## Author Information
 
-This role was created in 2017 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+This role was created in 2018 by [Rajat Ravi]
