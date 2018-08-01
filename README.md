@@ -10,7 +10,8 @@ Installs RabbitMQ on Linux.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    TODO
+    
+TODO
 
 TODO.
 
