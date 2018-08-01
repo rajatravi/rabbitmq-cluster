@@ -1,9 +1,19 @@
 ---
 
+rabbitmq_hosts: |
+   10.0.0.10 test-mq-master 
+   10.0.0.11 testmq-slave-01 
+
+update_hosts: false
+
+
 rabbitmq_daemon: rabbitmq-server
 rabbitmq_state: started
 rabbitmq_enabled: yes
 
+#cookies
+rabbitmq_create_cluster: yes
+rabbitmq_erlang_cookie: QNASHAHABQGQQZWEKRMG
 # Security
 rabbitmq_create_admin: true
 rabbitmq_admin_username: admin

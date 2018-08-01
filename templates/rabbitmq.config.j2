@@ -1,0 +1,10 @@
+[
+{rabbit, [{loopback_users, []}]},
+{rabbit@{{ ansible_hostname }},
+    []
+},
+{rabbitmq_management,
+    [{listener, [{port, 15682}]}
+]
+}
+].
